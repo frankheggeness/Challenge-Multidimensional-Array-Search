@@ -4,12 +4,14 @@ function locate(array, target) {
     if (array[i] === target) {
       return true;
     }
+
     if (array[i].constructor === Array) {
       if (locate(array[i], target) === true) {
         return true;
       }
     }
   }
+
   return false;
 }
 
